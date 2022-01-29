@@ -4,7 +4,7 @@ let removeBtn = document.querySelector('.remove')
 
 function updateQuantity(displayQuantity){
     let quantity = document.querySelector('.total-quantity')
-    quantity.innerHTML = displayQuantity
+        quantity.innerHTML = displayQuantity
 }
 
 let quantity = 1
@@ -22,3 +22,11 @@ increaseBtn.addEventListener('click', function(e){
     updateQuantity(`Quantity: ${quantity}`)
 })
 
+function removeItem(){
+    let removedItem = document.querySelector('.cart-item')
+        removedItem.remove()
+}
+
+removeBtn.addEventListener('click', function(e){
+    removeItem()
+})
